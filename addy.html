@@ -1,17 +1,31 @@
 <html>
    <head>
       <title>Addy</title>
+      <script type="text/javascript" src="brython.js"></script>
    </head>
    <body>
+     <body onload="brython(1)">
+
+     <script type="text/python">
+
+from browser import document, alert
+
+def welcome(ev):
+    alert("Welcome to Addy's Page!")
+
+document["button0"].bind("click", welcome)
+
+</script>
+
      <h1>I am Addy the Siberian Husky!</h1>
      <p>I am eight years old and I live with Jessica.
         I am from Canada and I enjoy running in the mountains.
         I do not enjoy: swimming.</p>
+     <button id="button0">Greeting</button>
      <img alt="Addy" src= "addy.jpg" />
      <a href= "https://en.wikipedia.org/wiki/Siberian_Husky">Wikipedia for Sibes</a>
      </body>
 </html>
-
 
 
 
